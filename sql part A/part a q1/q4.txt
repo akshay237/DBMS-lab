@@ -40,5 +40,5 @@ select count(part.pno),warehouse.wname
 from shipment
 inner join part on shipment.pno=part.pno
 inner join warehouse on shipment.wno=warehouse.wno
-group by warehouse.wno
+group by warehouse.wname
 order by count(part.pno) asc;
